@@ -1,11 +1,11 @@
 pipeline {
   agent {
-        kubernetes {
-        label 'alpine'
-        yamlFile 'build-pod.yaml'
-        defaultContainer 'alpine'
-        }
+    kubernetes {
+      label 'alpine'
+      yamlFile 'build-pod.yaml'
+      defaultContainer 'alpine'
     }
+  }
   stages {
     stage("Run docker") {
       steps {
